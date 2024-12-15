@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-item>
+      <ion-button [routerLink]="'/home'" routerDirection="Back">Back</ion-button>
+      <ion-title>Button Exampples</ion-title>
+    </ion-item>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">button</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-item>
+    <ion-button [routerLink]="'/home'" routerDirection="Back">Back</ion-button>
+    <ion-button (click)="moveBack()">Another way to back ...Back Button</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button shape="round" fill="outline" size="large" color="success">Default</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button [disabled]="true">Disabled</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button color="dark">
+      Esposa te amo
+      <ion-icon slot="end" name="heart" color="danger"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button size="large" shape="round">
+      <ion-icon slot="icon-only" name="star" color="warning"></ion-icon>
+    </ion-button>
+  </ion-item>
+
+
+ 
+  
+
+  
+
+  
+
+</ion-content>

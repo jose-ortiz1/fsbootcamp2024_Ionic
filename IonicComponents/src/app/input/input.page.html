@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>input</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-button (click)="moveBack()">Back</ion-button>
+  
+  <ion-list inset="true">
+    <ion-item>
+      <ion-input label="Name:" type="text" placeholder="Type your name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Email:" type="Email" placeholder="youremail@example.com"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Password:" placeholder="Type your password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Phone Number:" value="825-111-2222" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Disabled input" value="53703" [disabled]="true"></ion-input>
+    </ion-item>
+  </ion-list>
+</ion-content>
