@@ -26,5 +26,13 @@ export const routes: Routes = [
     path: 'list',
     loadComponent: () => import('./list/list.page').then( m => m.ListPage)
   },
+  {
+    path: 'modal',
+    loadComponent: () => import('./modal/modal.page').then( m => m.ModalPage)
+  },
+  {
+    path: 'alert',
+    loadComponent: () => import('./alert/alert.page').then( m => m.AlertPage)
+  },
   
 ];

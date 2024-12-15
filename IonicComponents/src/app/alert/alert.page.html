@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Alert Examples</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+  <ion-button (click)="moveBack()">Back</ion-button>
+
+  <ion-item>
+    <ion-button id="show-alert">Show Alert</ion-button>
+    <ion-alert trigger="show-alert" header="This is an alert" message="Here goes the alert message" [buttons]="alertButtons"></ion-alert>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="showAlert(true)">'Is Open' button show Alert</ion-button>
+    <ion-alert [isOpen]="isAlertOpen" header="This is an alert" message="Here goes the alert message" [buttons]="alertButtons" (didDismiss)="showAlert(false)"></ion-alert>
+  </ion-item>
+</ion-content>
