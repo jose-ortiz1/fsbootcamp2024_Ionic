@@ -14,7 +14,21 @@
   </ion-item>
 
   <ion-item>
-    <ion-button (click)="showAlert(true)">'Is Open' button show Alert</ion-button>
+    <ion-button (click)="showAlert(true)">'Is Open' button show Alert {{isAlertOpen}}</ion-button>
     <ion-alert [isOpen]="isAlertOpen" header="This is an alert" message="Here goes the alert message" [buttons]="alertButtons" (didDismiss)="showAlert(false)"></ion-alert>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="alertControl()">Alert Controller example</ion-button>
+  </ion-item>
+
+  <ion-item>
+    <ion-button id="advanceAlert">Alert to track exites</ion-button>
+    <ion-alert trigger="advanceAlert" header="This is an alert" message="This examples will track the exit that you select" [buttons]="advancedButton" (didDismiss)="showResult($event)"></ion-alert>
+  </ion-item>
+
+  <ion-item>
+    <ion-button id="alertTextInput">Alert Text Input Example</ion-button>
+    <ion-alert trigger="alertTextInput" header="Please enter your info" [buttons]="advancedButton" [inputs]="alertInputs"></ion-alert>
   </ion-item>
 </ion-content>

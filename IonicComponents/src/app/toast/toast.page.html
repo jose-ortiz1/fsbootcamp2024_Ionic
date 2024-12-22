@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Toast Page Example</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-button (click)="moveBack()">Back</ion-button>
+
+  <ion-item>
+    <ion-button id="toast-example">Show Toast example</ion-button>
+    <ion-toast trigger="toast-example" message="This toast will dissapear after 3 seconds" [duration]="3000"> </ion-toast>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="setOpen(true)">Show Toast example using ISOPEN {{isToastOpen}}</ion-button>
+    <ion-toast [isOpen]="isToastOpen" message="This toast will dissapear after 3 seconds" [duration]="3000" (didDismiss)="setOpen(false)"></ion-toast>
+  </ion-item>
+
+  <ion-item>
+    <ion-button (click)="displayToast()">Show Toast Example using CONTROLLER</ion-button>
+  </ion-item>
+  
+  <ion-item>
+    <ion-button id="open-toast">Show Toast Example using DISMISSING buttons</ion-button>
+    <ion-toast trigger="open-toast" message="This is a toast example using dismissing buttons" [duration]="3000" swipeGesture="vertical" icon="globe" [buttons]="toastButtons" (didDismiss)="setRoleMsg($event)"></ion-toast>
+  </ion-item>
+
+</ion-content>
